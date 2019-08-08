@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="WeatherClient.AddPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WeatherClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="Cyan">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height=".5*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="DarkCyan">
+                <TextBlock Text="Add Weather"
+                           FontSize="35"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center">
+
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="1" Background="White">
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock
+                               Text="Temperature:"
+                               Margin="5"/>
+
+                        <TextBox x:Name="txtTemp" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Temperature Unit:"
+                               Margin="5"/>
+
+                        <ComboBox x:Name="CmbTempType" Margin="5,0" />
+
+                        <TextBlock
+                               Text="Relative Humidity (in percentage):"
+                               Margin="5"/>
+
+                        <TextBox x:Name="txtHumid" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Barometric Pressure (in millibars):"
+                               Margin="5"/>
+
+                        <TextBox x:Name="txtPressure" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Note: Time is saved automatically."
+                               Margin="10"/>
+
+                        <Button Content="Add" 
+                                HorizontalAlignment="Right" 
+                                Width="70"
+                                Margin="10"
+                                Click="Button_ClickAdd"/>
+
+                    </StackPanel>
+                   
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="2" Background="DarkCyan">
+                
+                <Button Content="Main Menu"
+                                HorizontalAlignment="Center"
+                                Width="100"
+                                Height="50"
+                                Margin="20" Click="MainMenu_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

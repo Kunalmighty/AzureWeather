@@ -1,0 +1,137 @@
+﻿<Page
+    x:Class="WeatherClient.YearResults"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WeatherClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Cyan">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height=".5*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="DarkCyan">
+                <TextBlock
+                           FontSize="30"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center">
+                	<Run Text="Retrieve "/>
+                	<Run Text="Weather"/>
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="1" Background="White" Margin="0,5,0,75" Grid.RowSpan="2">
+
+                <ScrollViewer>
+
+                    <StackPanel VerticalAlignment="Center" 
+                            Margin="0,0,0,140">
+
+                        <TextBlock
+                               Text="Select Year:"
+                               Margin="5"/>
+
+                        <DatePicker x:ConnectionId='3' x:Name="DatePicker"
+                                    Margin ="5"
+                                    DayVisible="False"
+                                    MonthVisible="False"
+                                                                        />
+
+                        <TextBlock
+                               Text="Temperature average:"
+                               Margin="5"/>
+
+                        <TextBox x:ConnectionId='4' x:Name="txtTempAvg" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Temperature High:"
+                               Margin="5"/>
+
+                        <TextBox x:ConnectionId='5' x:Name="txtTempHigh" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Temperature Low:"
+                               Margin="5"/>
+
+                        <TextBox x:ConnectionId='6' x:Name="txtTempLow" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Humidity average:"
+                               Margin="5"/>
+
+                        <TextBox x:ConnectionId='7' x:Name="txtHumidAvg" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Humidity High:"
+                               Margin="5"/>
+
+                        <TextBox x:ConnectionId='8' x:Name="txtHumidHigh" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Humidity Low:"
+                               Margin="5"/>
+
+                        <TextBox x:ConnectionId='9' x:Name="txtHumidLow" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Pressure average:"
+                               Margin="5"/>
+
+                        <TextBox x:ConnectionId='10' x:Name="txtPressAvg" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Pressure High:"
+                               Margin="5"/>
+
+                        <TextBox x:ConnectionId='11' x:Name="txtPressHigh" Margin="5,0" 
+                                      />
+
+                        <TextBlock
+                               Text="Pressure Low:"
+                               Margin="5"/>
+
+                        <TextBox x:ConnectionId='12' x:Name="txtPressLow" Margin="5,0" 
+                                      />
+
+                    </StackPanel>
+
+                </ScrollViewer>
+
+            </Grid>
+
+            <Grid Grid.Row="2" Background="DarkCyan">
+
+
+                <Button x:ConnectionId='1' Content="Back"
+                                HorizontalAlignment="Left"
+                                Width="100"
+                                Height="50"
+                                Margin="20"                   />
+
+                <Button x:ConnectionId='2' Content="Main Menu"
+                                HorizontalAlignment="Right"
+                                Width="100"
+                                Height="50"
+                                Margin="20"                       />
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+
+
+
+
+

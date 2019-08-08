@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="WeatherClient.RetrieveOptionsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WeatherClient"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Cyan">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height=".5*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="DarkCyan">
+                <TextBlock
+                           FontSize="30"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center">
+                	<Run Text="Retrieve "/>
+                	<Run Text="Weather"/>
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Row="1" Background="White" Margin="0,5,0,75" Grid.RowSpan="2">
+
+                <StackPanel VerticalAlignment="Center" 
+                            Margin="0,0" >
+
+                    <Button Content="by Day"
+                                HorizontalAlignment="Center"
+                                Width="200"
+                                Height="30"
+                                Margin="15" Click="Button_Click"/>
+
+                    <Button Content="by Week"
+                                HorizontalAlignment="Center"
+                                Width="200"
+                                Height="30"
+                                Margin="15" Click="Button_Click_1"/>
+
+                    <Button Content="by Month"
+                                HorizontalAlignment="Center"
+                                Width="200"
+                                Height="30"
+                                Margin="15" Click="Button_Click_2"/>
+
+                    <Button Content="by Year"
+                                HorizontalAlignment="Center"
+                                Width="200"
+                                Height="30"
+                                Margin="15" Click="Button_Click_3"/>
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Row="2" Background="DarkCyan">
+
+                <Button Content="Main Menu"
+                                HorizontalAlignment="Center"
+                                Width="100"
+                                Height="50"
+                                Margin="20" Click="MainMenu_Click"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+
+
+
